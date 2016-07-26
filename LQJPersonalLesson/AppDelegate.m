@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "XHCourseController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    XHCourseController * lessMain = [[XHCourseController alloc] init];
+    UIWindow * maiWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    maiWindow.backgroundColor = [UIColor whiteColor];
+    maiWindow.rootViewController = lessMain;
+    
+    
+    
+    self.window = maiWindow;
+   [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
